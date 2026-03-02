@@ -51,9 +51,11 @@ if (is_post()) {
 <div class="container py-5" style="max-width:520px;">
   <div class="card shadow-sm">
     <div class="card-body p-4">
-      <h1 class="h4 fw-bold mb-1">FasoFlow</h1>
-      <p class="text-muted mb-4">Connexion sécurisée (Admin / Utilisateur)</p>
 
+<div class="text-center mb-4">
+  <h1 class="fw-bold">FasoFlow</h1>
+  <p class="text-muted small">Connexion sécurisée (Admin / Utilisateur)</p>
+</div>
       <?php if ($error): ?>
         <div class="alert alert-danger"><?= e($error) ?></div>
       <?php endif; ?>
@@ -86,4 +88,5 @@ if (is_post()) {
   </div>
 </div>
 </body>
+
 </html>
