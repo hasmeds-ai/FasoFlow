@@ -1,0 +1,55 @@
+/* assets/css/style.css */
+/* Styles simples et pro (Bootstrap-friendly) */
+
+:root{
+  --ff-card-radius: 14px;
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.card{
+  border-radius: var(--ff-card-radius);
+}
+
+.table td, .table th{
+  vertical-align: middle;
+}
+
+.badge{
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+.navbar-brand{
+  letter-spacing: .3px;
+}
+
+footer{
+  position: relative;
+}
+
+.text-muted{
+  color: #6c757d !important;
+}
+
+/* Améliore l’affichage mobile des tableaux */
+.table-responsive{
+  border-radius: var(--ff-card-radius);
+}
+
+/* Boutons plus “premium” */
+.btn{
+  border-radius: 10px;
+}
+
+/* Petites transitions */
+.btn, .card, .list-group-item{
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+
+.card:hover{
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.06);
+  transform: translateY(-1px);
+}
