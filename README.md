@@ -49,3 +49,59 @@ FasoFlow permet de :
 Exemple :
 ```bash
 php /chemin/vers/htdocs/fasoflow/cron/automation.php
+
+Planificateur Windows (option)
+
+Créer une tâche planifiée qui exécute :
+
+php.exe (chemin de PHP de XAMPP)
+
+avec l’argument : C:\xampp\htdocs\fasoflow\cron\automation.php
+
+Règles d’automatisation implémentées
+
+Attribution automatique :
+
+tâches non assignées + is_automated=1 → assignées aux utilisateurs (role = user) en rotation.
+
+Rappels de retard :
+
+tâches dont deadline < NOW() et status != Terminé → notification interne (warning) + historique.
+
+Sécurité
+
+Sessions PHP
+
+Protection des pages via includes/auth.php
+
+PDO (requêtes préparées)
+
+CSRF token sur formulaires sensibles
+
+STRUCTURE DU PROJET
+
+fasoflow/
+│── index.php
+│── logout.php
+│── dashboard.php
+│── about.php
+│── tasks.php
+│── automation.php
+│── reports.php
+│── contact.php
+│
+├── config/
+│   └── database.php
+│
+├── includes/
+│   ├── auth.php
+│   ├── functions.php
+│   ├── header.php
+│   └── footer.php
+│
+├── cron/
+│   └── automation.php
+│
+└── assets/
+    ├── css/style.css
+    └── js/script.js
